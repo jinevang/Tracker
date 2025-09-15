@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const AddPage = () => {
@@ -7,7 +7,7 @@ const AddPage = () => {
   
 
   return <View style={{paddingTop: insets.top}}>
-    Create New List
+    <Text>Create New List</Text>
   </View>
 }
 

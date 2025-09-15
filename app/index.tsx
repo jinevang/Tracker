@@ -1,10 +1,9 @@
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
-import { Text, View } from "react-native";
+import { navigate } from 'expo-router/build/global-state/routing';
+import { Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import IconButton from "./components/IconButton";
 import Summary from "./components/Summary";
+import { IconSymbol } from './components/ui/icon-symbol.ios';
 import { colors } from "./constants/colors";
 
 
@@ -26,13 +25,19 @@ export default function Index() {
     >
       <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
 
-        <Text style={{fontWeight: 600, fontSize: 28, color: colors.text[300], paddingBottom: 8}}>Tracker</Text>
+        <Text style={{fontWeight: 600, fontSize: 28, color: colors.text[300], paddingBottom: 8}}>Listy</Text>
         <View style={{flexDirection: 'row', gap: 8, alignItems: 'center'}}>
 
-          <Link href='/AddPage' asChild>
-          <IconButton icon={<FontAwesome6 name="plus" size={20}/>}/>
+          <Link href='/(settings)/AddPage' asChild>
+          <Pressable onTouchEnd={() => navigate('/(settings)/AddPage')}>
+
+            <IconSymbol name='plus' color='black' size={24}/>
+          </Pressable>
           </Link>
-          <IconButton icon={<Ionicons name="settings-sharp" size={20} />}/>
+        <Pressable onTouchEnd={() => navigate('/(settings)/MainSettings')}>
+
+          <IconSymbol name='gear' color='black' size={24}/>
+          </Pressable>
         </View>
       </View>
       <Summary/>
