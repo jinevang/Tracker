@@ -2,7 +2,7 @@
 
 ## Intro
 
-I am learning React Native and making an iOS/Android Tracker app to track various thinks
+I am learning React Native and making an iOS/Android Tracker app to track various things (albums, drinks, etc)
 
 ## Expo Instructions
 
