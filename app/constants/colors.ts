@@ -6,3 +6,5 @@ export const colors = {
     100: '#DDDFDF',
   }
 }
+
+export default colors;

@@ -1,5 +1,6 @@
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Link } from 'expo-router';
 import { Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import IconButton from "./components/IconButton";
@@ -28,7 +29,9 @@ export default function Index() {
         <Text style={{fontWeight: 600, fontSize: 28, color: colors.text[300], paddingBottom: 8}}>Tracker</Text>
         <View style={{flexDirection: 'row', gap: 8, alignItems: 'center'}}>
 
+          <Link href='/AddPage' asChild>
           <IconButton icon={<FontAwesome6 name="plus" size={20}/>}/>
+          </Link>
           <IconButton icon={<Ionicons name="settings-sharp" size={20} />}/>
         </View>
       </View>

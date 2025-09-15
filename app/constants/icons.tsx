@@ -6,3 +6,5 @@ type Dictionary = { [index: string]: ReactElement}
 export const icons: Dictionary = {
   'plus': <Entypo name='plus'/>
 }
+
+export default icons;
